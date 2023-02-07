@@ -1,7 +1,7 @@
 const form = document.querySelector('form');
 const input = document.querySelector('input');
 const resultsContainer = document.querySelector('.results')
-const popup = document.querySelector('.popup')
+
 
 const API_URL = 'https://api.shrtco.de/v2'
 
@@ -27,7 +27,6 @@ async function getShortedLink(link) {
 }
 
 function renderResults(data) {
-
   resultsContainer.innerHTML =
     `
       <div class="result">
@@ -44,10 +43,4 @@ function renderResults(data) {
 function copyToClipboard() {
   const copyTextElement = document.querySelector('.shorted p')
   navigator.clipboard.writeText(copyTextElement.textContent)
-
-  popup.classList.add('active')
-
-  setTimeout(function () {
-    popup.classList.remove('active')
-  }, 2000);
 }
