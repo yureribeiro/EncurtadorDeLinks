@@ -1,0 +1,14 @@
+body {
+  background-color: #e0e0e0;
+}
+
+.newUrl-btn {
+background-color: red;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  background-color: blue;
+  color: white;
+}
